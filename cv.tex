@@ -1,0 +1,149 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+% Removed titlesec package - using custom section formatting instead
+
+% Custom section formatting without titlesec
+\renewcommand{\section}[1]{%
+  \vspace{12pt}%
+  {\Large\bfseries\MakeUppercase{#1}}%
+  \vspace{2pt}%
+  \hrule%
+  \vspace{8pt}%
+}
+\newcommand{\entry}[4]{
+  \textbf{#1} \hfill #2 \\
+  \textit{#3} \hfill #4 \\
+}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\Huge \textbf{Tim Richardson}} \\
+    \vspace{5pt}
+    London, United Kingdom \\
+    07828134100 \ \textbullet \ \href{mailto:tim@rewire.it}{tim@rewire.it} \\
+    \href{http://rewire.it}{http://rewire.it} \ \textbullet \ \href{https://github.com/timini}{github.com/timini}
+\end{center}
+
+% --- SKILLS ---
+\section{Technical Skills}
+\textbf{Languages \& Tools:} node.js, django, elasticsearch, postgresql, docker, bioinformatics, reactjs, javascript, d3.js, python, scipy, numpy, git, amazon-web-services, kubernetes, graphql, google-cloud-platform, samtools, continuous-integration, continuous-deployment, tdd, microservices, unit-testing, web-services. \\
+\textit{(Dislikes: php, perl)}
+
+% --- EXPERIENCE ---
+\section{Experience}
+
+\entry{Genomics England}{London, UK}{Software Engineer}{Dec 2021 -- Present}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item \textbf{Engineering Leadership:} Line Manager for 6 direct reports, responsible for mentorship, performance management, and delivery oversight.
+    \item \textbf{Workflow Modernisation:} Key role in migrating complex workflow orchestration systems to Nextflow, improving scalability and reproducibility.
+    \item \textbf{AI Transformation:} Leading internal initiative to introduce and operationalize AI coding assistants across engineering, driving efficiency.
+    \item \textbf{Backend Development:} Architecting and maintaining robust backend services using Python and AWS for high-throughput genomic data processing.
+\end{itemize}
+\vspace{8pt}
+
+\entry{IQVIA}{London, UK}{Senior Software Engineer}{Mar 2019 -- Dec 2021}
+\textit{Stack: go, typescript, reactjs, redux, elasticsearch, postgresql, d3.js}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Coordinating releases, product development, process improvement, code review.
+\end{itemize}
+\vspace{8pt}
+
+\entry{Project Shivom}{London, UK}{Lead Developer}{Oct 2018 -- Mar 2019}
+\textit{Stack: blockchain, smartcontracts, google-genomics, google-cloud-build, postgresql, graphql, react-apollo}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Design, development, and deployment of a genomic data sharing solution with blockchain components.
+    \item Managed development team, created wireframes, developed backend services (REST APIs) and React SPA frontend.
+    \item Deployed using Docker and App Engine.
+\end{itemize}
+\vspace{8pt}
+
+\entry{Polecat}{London, UK}{Python Contractor}{Jul 2018 -- Oct 2018}
+\textit{Stack: django, django-rest-framework, graphene-python, reactjs, elasticsearch, postgresql, plotly}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Built a Python reporting service to generate PowerPoint marketing reports.
+    \item Engaged with technical teams and product managers to produce software specifications and wireframes.
+    \item Solution built using Python, Django, GraphQL, React, Elasticsearch, and Plotly.js.
+\end{itemize}
+\vspace{8pt}
+
+\entry{Congenica}{Hinxton, UK}{Senior Frontend Developer (React)}{Mar 2016 -- Jul 2018}
+\textit{Stack: perl, reactjs, react-router, redux, reactive-programming, bioperl}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Developed new and optimised existing features for clinical genomics tool using Perl APIs and React frontend.
+    \item Focused on optimal data flow for data-intensive UI.
+    \item Led development of an API to integrate Congenica's Sapientia platform with Genomics England's 100k genomes project.
+\end{itemize}
+\vspace{8pt}
+
+\entry{Repositive Ltd}{London, UK}{Lead Developer}{Nov 2014 -- Mar 2016}
+\textit{Stack: docker, node.js, ansible, ember.js, git, agile, postgresql, elasticsearch}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Led development of a genomic data discovery platform, including infrastructure and development processes.
+    \item Developed web app architecture based on Node.js Express API using Redis, Postgres, and Elasticsearch.
+    \item Built UI as an Ember.js single-page application.
+\end{itemize}
+\vspace{8pt}
+
+\entry{Wolfson Institute for Biomedical Research}{London, UK}{Freelance Bioinformatics Project}{Oct 2014 -- Nov 2014}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Analyzed ChIP-SEQ project: trimming and QC, peak calling, motif discovery, GO annotation.
+\end{itemize}
+\vspace{8pt}
+
+\entry{Fire Tech Camp}{London, UK}{Instructor}{Jun 2014 -- Aug 2014}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Taught Python programming to children aged 11-15.
+\end{itemize}
+\vspace{8pt}
+
+\entry{Ixxy}{Brighton/Remote}{Django Developer}{Mar 2013 -- May 2014}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Built and maintained sites based on Django/Python CMS system.
+\end{itemize}
+\vspace{8pt}
+
+\entry{Ecomarket.com}{London, UK}{Django Developer}{Jan 2013 -- Mar 2013}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Backend developer for an online marketplace using Django, Python, and PostgreSQL.
+\end{itemize}
+\vspace{8pt}
+
+\entry{Swerve Concepts}{London, UK}{Junior Software Developer}{Feb 2011 -- Jan 2013}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Full stack developer using Python and PHP frameworks. Developed cloud-based products Swerve Media Hub and SignUpAnywhere.
+\end{itemize}
+
+% --- EDUCATION ---
+\section{Education}
+
+\entry{Birkbeck, University of London}{London, UK}{MSc Bioinformatics \& Systems Biology (Merit)}{Sep 2012 -- Sep 2014}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Studied statistics, protein structure, sequence alignment, systems biology, and software development.
+    \item Thesis: Tracing human migration using MCMC methods for population clustering with dense genotype data.
+\end{itemize}
+\vspace{8pt}
+
+\entry{Leeds University}{Leeds, UK}{BSc Cognitive Science (Hons)}{Sep 2005 -- Sep 2008}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Interdisciplinary course covering computing, psychology, and philosophy.
+    \item Dissertation: Data mining techniques for dynamic data sets.
+\end{itemize}
+
+% --- PROJECTS & INTERESTS ---
+\section{Projects \& Interests}
+
+\textbf{hansard} (\href{https://github.com/timini/hansard}{github.com/timini/hansard}) \\
+Analysis of the hansard archive materials. Uses Jupyter, Django REST, Ember.js, Docker, Kubernetes.
+
+\textbf{chromo9} (\href{https://github.com/timini/chromo9}{github.com/timini/chromo9}) \\
+Biocomputing II project using Perl.
+
+\textbf{keyzen} (\href{https://github.com/timini/keyzen}{github.com/timini/keyzen}) \\
+A touch typing trainer geared towards programmers.
+
+\end{document}
