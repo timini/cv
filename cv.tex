@@ -51,21 +51,21 @@
 
 % --- SUMMARY ---
 \section{Summary}
-Software engineer with 15 years' experience, over a decade of it on genomic and health data. At Genomics England I work on national-scale genomic pipelines, build the Claude Code tooling for the organisation's AI coding pilot, and manage a team of six. At IQVIA I deployed patient-level prediction models on real-world health data. I build open-source tools for AI agents and test them with pre-registered experiments.
+Software engineer with 15 years' experience, over a decade of it on genomic and health data. At Genomics England I work on national-scale genomic pipelines, build the Claude Code tooling for the organisation's AI coding pilot, and manage a team of six. At IQVIA I deployed patient-level prediction models on real-world health data. I run Rewire Bio, a benchmark database of 294 biological AI models, and build open-source tools for AI agents that I test with pre-registered experiments.
 
 % --- OPEN SOURCE ---
 \section{Applied AI Projects}
 
-\textbf{Agentic Verification} \hfill {\small\href{https://github.com/timini/agentic-verification}{\color{accent}github.com/timini/agentic-verification}}\par
-Claude Code plugin and GitHub Action that checks whether tests would catch broken code, by running every mutant of the lines a change touches. Evaluated in a pre-registered study and agent benchmarks on 8 open-source Python libraries, written up as a paper. On 14 real commits, the agent's tests caught 99\% of mutants with the plugin against 92\% without.
+\textbf{Rewire Bio benchmark database} {\color{muted}\small web database, MCP server, Claude Code plugin} \hfill {\small\href{https://benchmarks.rewirebio.io}{\color{accent}benchmarks.rewirebio.io}}\par
+Answers ``which biological AI model works best for my task?'' across omics and molecular biology. It holds \textbf{46,766} results for 294 models on 97 benchmarks, each linked to the paper, table or run it came from, and organised by biological question (28 use cases). Results measured under different protocols are kept apart rather than merged into one leaderboard, and gaps in the evidence are reported. Where a key comparison is missing, I run the benchmark and publish the code. Agents can query it through an MCP server and a Claude Code plugin.
 \gap
 
-\textbf{neuromem} \hfill {\small\href{https://github.com/timini/neuromem}{\color{accent}github.com/timini/neuromem}}\par
-Long-term memory for LLM agents modelled on hippocampal consolidation, with providers for Gemini, OpenAI, Claude and local models. Scores 0.870 on the LongMemEval-s benchmark (n=100).
+\textbf{Agentic Verification} {\color{muted}\small Claude Code plugin, GitHub Action, research paper} \hfill {\small\href{https://github.com/timini/agentic-verification}{\color{accent}github.com/timini/agentic-verification}}\par
+Passing tests do not prove an AI agent's change is tested. This plugin breaks every changed line in small ways and has the agent write tests until each break is caught, then reports a verdict instead of a diff to review. I tested it in a pre-registered study across 8 open-source Python libraries and published the paper. On 14 real commits, the agent's tests caught \textbf{99\%} of a change's mutants with the plugin, against 92\% without it and 86\% for the developers' own tests.
 \gap
 
-\textbf{drill-me} \hfill {\small\href{https://github.com/timini/drill-me}{\color{accent}github.com/timini/drill-me}}\par
-Claude Code plugin that turns Claude into an adaptive tutor, with spaced repetition and a memory of what you got wrong. 15 GitHub stars.
+\textbf{neuromem} {\color{muted}\small agent memory library} \hfill {\small\href{https://github.com/timini/neuromem}{\color{accent}github.com/timini/neuromem}}\par
+Long-term memory for LLM agents, modelled on how the brain moves memories from the hippocampus to the neocortex. Works with Claude, OpenAI, Gemini and local models. Scores \textbf{0.870} on the LongMemEval-s benchmark (n=100), above the published EmergenceMem baseline of 0.86.
 
 % --- EXPERIENCE ---
 \section{Experience}
