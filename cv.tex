@@ -31,14 +31,16 @@
 
 % --- SUMMARY ---
 \section{Summary}
-Senior Software Engineer and Engineering Manager with 13+ years of experience building scalable data platforms, specialising in genomics and healthcare. Currently leading AI transformation initiatives and managing engineering teams at Genomics England. Strong track record delivering full-stack solutions across Python, Go, and cloud infrastructure, with deep expertise in bioinformatics pipelines and ML integration.
+Senior Software Engineer and Engineering Manager with 13+ years of experience building scalable data platforms, specialising in genomics and healthcare. Currently leading AI transformation initiatives and managing engineering teams at Genomics England. Strong track record delivering full-stack solutions across Python, Go, and cloud infrastructure, with deep expertise in bioinformatics pipelines and ML integration. Builds and publishes open-source tooling for AI coding agents, evaluated with pre-registered experiments.
 
 % --- SKILLS ---
 \section{Technical Skills}
-\textbf{Languages:} Python, Go, TypeScript, JavaScript, SQL \\
-\textbf{AI/ML:} LLMs, RAG, LangChain, OpenAI API, Google ADK, NumPy, SciPy, Pandas \\
+\textbf{Languages:} Python, Go, TypeScript, JavaScript, Rust, SQL \\
+\textbf{AI/ML:} LLMs, RAG, LangChain, OpenAI API, Anthropic API, Google ADK, NumPy, SciPy, Pandas \\
+\textbf{AI Agents:} Claude Code plugins and skills, agent memory, agent evaluation and benchmarking \\
+\textbf{Testing:} pytest, mutation testing, coverage analysis, TDD, CI quality gates \\
 \textbf{Backend:} FastAPI, Django, Node.js, GraphQL, REST APIs, Microservices \\
-\textbf{Frontend:} React, Next.js, Redux, D3.js \\
+\textbf{Frontend:} React, Next.js, Redux, Svelte, Tauri, D3.js \\
 \textbf{Data:} PostgreSQL, Elasticsearch, Redis, Vector Databases, Graph Databases, FHIR, Ontologies \\
 \textbf{Cloud \& Infrastructure:} AWS, GCP, Docker, Kubernetes, Terraform, CI/CD \\
 \textbf{Bioinformatics:} Nextflow, nf-core, VEP, Samtools, BWA, Singularity, LSF
@@ -130,19 +132,28 @@ Senior Software Engineer and Engineering Manager with 13+ years of experience bu
     \item Full stack developer using Python and PHP frameworks. Developed cloud-based products Swerve Media Hub and SignUpAnywhere.
 \end{itemize}
 
-% --- PROJECTS & INTERESTS ---
-\section{Projects \& Interests}
+% --- PROJECTS ---
+\section{Selected Open Source}
 
-\textbf{hansard} (\href{https://github.com/timini/hansard}{github.com/timini/hansard}) \\
-Analysis of the hansard archive materials. Uses Jupyter, Django REST, Ember.js, Docker, Kubernetes.
+\medskip\noindent\textbf{Agentic Verification} (\href{https://github.com/timini/agentic-verification}{github.com/timini/agentic-verification}) \\
+Claude Code plugin and GitHub Action that checks whether tests catch broken code, by running every mutant of the lines a change touches. Backed by a pre-registered study and agent benchmarks on 8 open-source Python libraries, published as a paper: on 14 real commits, the agent's tests caught 99\% of mutants with the plugin against 92\% without.
 
-\textbf{chromo9} (\href{https://github.com/timini/chromo9}{github.com/timini/chromo9}) \\
-Biocomputing II project using Perl.
+\medskip\noindent\textbf{drill-me} (\href{https://github.com/timini/drill-me}{github.com/timini/drill-me}) \\
+Claude Code plugin that turns Claude into an adaptive tutor: it quizzes before it explains, schedules reviews with spaced repetition and remembers what you got wrong across sessions.
 
-\textbf{keyzen} (\href{https://github.com/timini/keyzen}{github.com/timini/keyzen}) \\
-A touch typing trainer geared towards programmers.
+\medskip\noindent\textbf{neuromem} (\href{https://github.com/timini/neuromem}{github.com/timini/neuromem}) \\
+Long-term memory for LLM agents modelled on hippocampal consolidation, with providers for Gemini, OpenAI, Claude and local models. Scores 0.870 on the LongMemEval-s benchmark (n=100).
 
-\textbf{rewire.it} (\href{https://rewire.it}{rewire.it}) \\
+\medskip\noindent\textbf{horn-simulation} (\href{https://github.com/timini/horn-simulation}{github.com/timini/horn-simulation}) \\
+Horn loudspeaker design pipeline: generates geometries, solves the Helmholtz equation with FEM, matches real drivers and ranks the combinations.
+
+\medskip\noindent\textbf{Crate Digger} (\href{https://github.com/timini/crate-digger}{github.com/timini/crate-digger}) \\
+Local-first desktop app for DJs that discovers, downloads, analyses and ranks new music. Rust, Tauri and Svelte, with a Rust metadata service on Cloud Run.
+
+\medskip\noindent\textbf{Wiggle Room} (\href{https://github.com/timini/wiggleroom}{github.com/timini/wiggleroom}) \\
+45 VCV Rack 2 synthesiser modules built with Faust physical-modelling DSP.
+
+\medskip\noindent\textbf{rewire.it} (\href{https://rewire.it}{rewire.it}) \\
 Personal blog on software engineering, genomics, and technology.
 
 % --- EDUCATION ---
