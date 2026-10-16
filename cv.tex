@@ -61,7 +61,7 @@ Helps researchers choose the right AI model for a biological task. Search by bio
 \gap
 
 \textbf{Agentic Verification} {\color{muted}\small Claude Code plugin, GitHub Action, research paper} \hfill {\small\href{https://github.com/timini/agentic-verification}{\color{accent}github.com/timini/agentic-verification}}\par
-Passing tests do not prove an AI agent's change is tested. This plugin breaks every changed line in small ways and has the agent write tests until each break is caught, then reports a verdict instead of a diff to review. I tested it in a pre-registered study across 8 open-source Python libraries and published the paper. On 14 real commits, the agent's tests caught \textbf{99\%} of a change's mutants with the plugin, against 92\% without it and 86\% for the developers' own tests.
+Checks that the tests an AI coding agent writes would actually catch bugs. It plants small bugs in the code the agent changed, and the agent keeps writing tests until every one is caught. In a published study on real changes to 8 open-source Python libraries, agents using it caught \textbf{99\%} of planted bugs, against 92\% without it.
 \gap
 
 \textbf{neuromem} {\color{muted}\small agent memory library} \hfill {\small\href{https://github.com/timini/neuromem}{\color{accent}github.com/timini/neuromem}}\par
