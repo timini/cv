@@ -1,163 +1,153 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=1in]{geometry}
-\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[default,semibold]{sourcesans}
+\usepackage[a4paper,top=1.5cm,bottom=1.5cm,left=1.8cm,right=1.8cm]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
 \usepackage{enumitem}
-% Removed titlesec package - using custom section formatting instead
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\usepackage{ragged2e}
 
-% Custom section formatting without titlesec
-\renewcommand{\section}[1]{%
-  \vspace{12pt}%
-  {\Large\bfseries\MakeUppercase{#1}}%
-  \vspace{2pt}%
-  \hrule%
-  \vspace{8pt}%
-}
-\newcommand{\entry}[4]{
-  \textbf{#1} \hfill #2 \\
-  \textit{#3} \hfill #4 \\
-}
+\definecolor{accent}{HTML}{1F5F8B}
+\definecolor{muted}{HTML}{5A5A5A}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\linespread{1.08}
+\RaggedRight
+\setlength{\RaggedRightParindent}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+% Section headings: small accent caps with a thin rule.
+\titleformat{\section}{\color{accent}\large\bfseries\scshape}{}{0pt}{}[\vspace{-4pt}{\color{accent!40}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+\setlist[itemize]{leftmargin=1.1em, itemsep=1.5pt, topsep=3pt, parsep=0pt, label={\color{accent}\textbullet}}
+
+% \role{Company}{Location}{Title}{Dates}
+\newcommand{\role}[4]{%
+  {\bfseries #1}\hfill{\color{muted}#4}\\
+  {\itshape #3}\hfill{\color{muted}\small #2}\par}
+\newcommand{\stack}[1]{{\color{muted}\small #1}\par}
+\newcommand{\gap}{\vspace{8pt}}
 
 \begin{document}
 
 % --- HEADER ---
-\begin{center}
-    {\Huge \textbf{Tim Richardson}} \\
-    \vspace{5pt}
-    London, United Kingdom \\
-    07828134100 \ \textbullet \ \href{mailto:tim@rewire.it}{tim@rewire.it} \\
-    \href{http://rewire.it}{http://rewire.it} \ \textbullet \ \href{https://github.com/timini}{github.com/timini}
-\end{center}
+{\fontsize{26}{30}\selectfont\bfseries Tim Richardson}\par
+\vspace{2pt}
+{\large\color{accent} Senior Software Engineer \textbullet{} Engineering Manager \textbullet{} Genomics and AI}\par
+\vspace{8pt}
+{\small\color{muted}
+\faMapMarker*\ London, UK \quad
+\faPhone*\ 07828134100 \quad
+\faEnvelope[regular]\ \href{mailto:tim@rewire.it}{tim@rewire.it} \quad
+\faGlobe\ \href{https://rewire.it}{rewire.it} \quad
+\faGithub\ \href{https://github.com/timini}{github.com/timini}}
 
 % --- SUMMARY ---
 \section{Summary}
-Senior Software Engineer and Engineering Manager with 13+ years of experience building scalable data platforms, specialising in genomics and healthcare. Currently leading AI transformation initiatives and managing engineering teams at Genomics England. Strong track record delivering full-stack solutions across Python, Go, and cloud infrastructure, with deep expertise in bioinformatics pipelines and ML integration. Builds and publishes open-source tooling for AI coding agents, evaluated with pre-registered experiments.
+Senior software engineer and engineering manager with 13+ years building scalable data platforms, specialising in genomics and healthcare. Currently leading AI transformation and managing an engineering team at Genomics England. Track record delivering full-stack systems in Python, Go and TypeScript on AWS and GCP, with deep experience of bioinformatics pipelines and ML integration. Builds and publishes open-source tooling for AI coding agents, tested with pre-registered experiments.
 
 % --- SKILLS ---
 \section{Technical Skills}
-\textbf{Languages:} Python, Go, TypeScript, JavaScript, Rust, SQL \\
-\textbf{AI/ML:} LLMs, RAG, LangChain, OpenAI API, Anthropic API, Google ADK, NumPy, SciPy, Pandas \\
-\textbf{AI Agents:} Claude Code plugins and skills, agent memory, agent evaluation and benchmarking \\
-\textbf{Testing:} pytest, mutation testing, coverage analysis, TDD, CI quality gates \\
-\textbf{Backend:} FastAPI, Django, Node.js, GraphQL, REST APIs, Microservices \\
-\textbf{Frontend:} React, Next.js, Redux, Svelte, Tauri, D3.js \\
-\textbf{Data:} PostgreSQL, Elasticsearch, Redis, Vector Databases, Graph Databases, FHIR, Ontologies \\
-\textbf{Cloud \& Infrastructure:} AWS, GCP, Docker, Kubernetes, Terraform, CI/CD \\
-\textbf{Bioinformatics:} Nextflow, nf-core, VEP, Samtools, BWA, Singularity, LSF
+{\small
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{3.1cm}X@{}}
+Languages & Python, Go, TypeScript, JavaScript, Rust, SQL \\
+AI and ML & LLMs, RAG, LangChain, OpenAI and Anthropic APIs, Google ADK, NumPy, SciPy, Pandas \\
+AI agents & Claude Code plugins and skills, agent memory, agent evaluation and benchmarking \\
+Testing & pytest, mutation testing, coverage analysis, TDD, CI quality gates \\
+Backend & FastAPI, Django, Node.js, GraphQL, REST, microservices \\
+Frontend & React, Next.js, Redux, Svelte, Tauri, D3.js \\
+Data & PostgreSQL, Elasticsearch, Redis, vector and graph databases, FHIR, ontologies \\
+Cloud & AWS, GCP, Docker, Kubernetes, Terraform, CI/CD \\
+Bioinformatics & Nextflow, nf-core, VEP, Samtools, BWA, Singularity, LSF \\
+\end{tabularx}}
 
 % --- EXPERIENCE ---
 \section{Experience}
 
-\entry{Genomics England}{London, UK}{Senior Software Engineer and Performance Development Lead}{Dec 2021 -- Present}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item \textbf{Engineering Leadership:} Line Manager for 6 direct reports, responsible for mentorship, performance management, and delivery oversight.
-    \item \textbf{Workflow Modernisation:} Key role in migrating complex workflow orchestration systems to Nextflow, improving scalability and reproducibility.
-    \item \textbf{AI Transformation:} Leading internal initiative to introduce and operationalize AI coding assistants across engineering, driving efficiency.
-    \item \textbf{Backend Development:} Architecting and maintaining robust backend services using Python and AWS for high-throughput genomic data processing.
+\role{Genomics England}{London, UK}{Senior Software Engineer and Performance Development Lead}{Dec 2021 -- Present}
+\begin{itemize}
+  \item \textbf{Engineering leadership:} line manager for 6 direct reports, responsible for mentoring, performance management and delivery.
+  \item \textbf{AI transformation:} leading the internal programme that introduces AI coding assistants across engineering.
+  \item \textbf{Workflow modernisation:} key role in migrating complex workflow orchestration to Nextflow, improving scalability and reproducibility.
+  \item \textbf{Backend development:} designing and maintaining Python services on AWS for high-throughput genomic data processing.
 \end{itemize}
-\vspace{8pt}
+\gap
 
-\entry{IQVIA}{London, UK}{Senior Software Engineer - AI/ML Team}{Mar 2019 -- Dec 2021}
-\textit{Stack: go, fastapi, typescript, reactjs, redux, elasticsearch, postgresql, d3.js}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item \textbf{Full-Stack Development:} Built data analytics product for real-world healthcare data, developing backend services in Go and frontend in React.
-    \item \textbf{AI Model Deployment:} Deployed machine learning models using FastAPI, enabling scalable inference for healthcare analytics.
-    \item \textbf{Statistical Features:} Developed and implemented statistical features for the analytics product, enhancing data insights capabilities.
-    \item Coordinating releases, product development, process improvement, code review.
+\role{IQVIA}{London, UK}{Senior Software Engineer, AI/ML Team}{Mar 2019 -- Dec 2021}
+\stack{Go, FastAPI, TypeScript, React, Redux, Elasticsearch, PostgreSQL, D3.js}
+\begin{itemize}
+  \item Built a data analytics product for real-world healthcare data: Go backend services and a React frontend.
+  \item Deployed machine learning models with FastAPI for scalable inference in healthcare analytics.
+  \item Designed and implemented the product's statistical features.
+  \item Coordinated releases, product development, process improvement and code review.
 \end{itemize}
-\vspace{8pt}
+\gap
 
-\entry{Project Shivom}{London, UK}{Lead Developer}{Oct 2018 -- Mar 2019}
-\textit{Stack: blockchain, smartcontracts, google-genomics, google-cloud-build, postgresql, graphql, react-apollo}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Design, development, and deployment of a genomic data sharing solution with blockchain components.
-    \item Managed development team, created wireframes, developed backend services (REST APIs) and React SPA frontend.
-    \item Deployed using Docker and App Engine.
+\role{Project Shivom}{London, UK}{Lead Developer}{Oct 2018 -- Mar 2019}
+\stack{Blockchain, smart contracts, Google Genomics, Cloud Build, PostgreSQL, GraphQL, React Apollo}
+\begin{itemize}
+  \item Designed, built and deployed a genomic data sharing platform with blockchain components.
+  \item Managed the development team; built the REST backend and React frontend; deployed with Docker and App Engine.
 \end{itemize}
-\vspace{8pt}
+\gap
 
-\entry{Polecat}{London, UK}{Python Contractor}{Jul 2018 -- Oct 2018}
-\textit{Stack: django, django-rest-framework, graphene-python, reactjs, elasticsearch, postgresql, plotly}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Built a Python reporting service to generate PowerPoint marketing reports.
-    \item Engaged with technical teams and product managers to produce software specifications and wireframes.
-    \item Solution built using Python, Django, GraphQL, React, Elasticsearch, and Plotly.js.
+\role{Congenica}{Hinxton, UK}{Senior Frontend Developer}{Mar 2016 -- Jul 2018}
+\stack{Perl, React, Redux, reactive programming, BioPerl}
+\begin{itemize}
+  \item Developed and optimised features of a clinical genomics tool with Perl APIs and a React frontend, focusing on data flow in a data-intensive UI.
+  \item Led development of the API integrating Congenica's Sapientia platform with Genomics England's 100,000 Genomes Project.
 \end{itemize}
-\vspace{8pt}
+\gap
 
-\entry{Congenica}{Hinxton, UK}{Senior Frontend Developer (React)}{Mar 2016 -- Jul 2018}
-\textit{Stack: perl, reactjs, react-router, redux, reactive-programming, bioperl}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Developed new and optimised existing features for clinical genomics tool using Perl APIs and React frontend.
-    \item Focused on optimal data flow for data-intensive UI.
-    \item Led development of an API to integrate Congenica's Sapientia platform with Genomics England's 100k genomes project.
+\role{Repositive}{London, UK}{Lead Developer}{Nov 2014 -- Mar 2016}
+\stack{Docker, Node.js, Ansible, Ember.js, PostgreSQL, Elasticsearch}
+\begin{itemize}
+  \item Led development of a genomic data discovery platform, including its infrastructure and development process.
+  \item Designed the Node.js and Express API on Redis, PostgreSQL and Elasticsearch, with an Ember.js single-page frontend.
 \end{itemize}
-\vspace{8pt}
+\gap
 
-\entry{Repositive Ltd}{London, UK}{Lead Developer}{Nov 2014 -- Mar 2016}
-\textit{Stack: docker, node.js, ansible, ember.js, git, agile, postgresql, elasticsearch}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Led development of a genomic data discovery platform, including infrastructure and development processes.
-    \item Developed web app architecture based on Node.js Express API using Redis, Postgres, and Elasticsearch.
-    \item Built UI as an Ember.js single-page application.
-\end{itemize}
-\vspace{8pt}
+{\bfseries Earlier roles}\par
+\vspace{2pt}
+{\small
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight}p{5.6cm}>{\RaggedRight\arraybackslash}X>{\color{muted}}r@{}}
+\textbf{Polecat}, Python Contractor & Python reporting service generating PowerPoint reports (Django, GraphQL, React, Elasticsearch) & 2018 \\
+\textbf{Wolfson Institute}, Freelance & ChIP-seq analysis: QC, peak calling, motif discovery, GO annotation & 2014 \\
+\textbf{Fire Tech Camp}, Instructor & Taught Python to children aged 11 to 15 & 2014 \\
+\textbf{Ixxy}, Django Developer & Sites on a Django CMS & 2013 -- 2014 \\
+\textbf{Ecomarket.com}, Django Developer & Backend for an online marketplace (Django, PostgreSQL) & 2013 \\
+\textbf{Swerve Concepts}, Junior Developer & Full-stack Python and PHP; built Swerve Media Hub and SignUpAnywhere & 2011 -- 2013 \\
+\end{tabularx}}
 
-\entry{Wolfson Institute for Biomedical Research}{London, UK}{Freelance Bioinformatics Project}{Oct 2014 -- Nov 2014}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Analyzed ChIP-SEQ project: trimming and QC, peak calling, motif discovery, GO annotation.
-\end{itemize}
-\vspace{8pt}
-
-\entry{Fire Tech Camp}{London, UK}{Instructor}{Jun 2014 -- Aug 2014}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Taught Python programming to children aged 11-15.
-\end{itemize}
-\vspace{8pt}
-
-\entry{Ixxy}{Brighton/Remote}{Django Developer}{Mar 2013 -- May 2014}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Built and maintained sites based on Django/Python CMS system.
-\end{itemize}
-\vspace{8pt}
-
-\entry{Ecomarket.com}{London, UK}{Django Developer}{Jan 2013 -- Mar 2013}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Backend developer for an online marketplace using Django, Python, and PostgreSQL.
-\end{itemize}
-\vspace{8pt}
-
-\entry{Swerve Concepts}{London, UK}{Junior Software Developer}{Feb 2011 -- Jan 2013}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Full stack developer using Python and PHP frameworks. Developed cloud-based products Swerve Media Hub and SignUpAnywhere.
-\end{itemize}
-
-% --- PROJECTS ---
+% --- OPEN SOURCE ---
 \section{Selected Open Source}
 
-\medskip\noindent\textbf{Agentic Verification} (\href{https://github.com/timini/agentic-verification}{github.com/timini/agentic-verification}) \\
-Claude Code plugin and GitHub Action that checks whether tests catch broken code, by running every mutant of the lines a change touches. Backed by a pre-registered study and agent benchmarks on 8 open-source Python libraries, published as a paper: on 14 real commits, the agent's tests caught 99\% of mutants with the plugin against 92\% without.
+\textbf{Agentic Verification} \hfill {\small\href{https://github.com/timini/agentic-verification}{\color{accent}github.com/timini/agentic-verification}}\par
+Claude Code plugin and GitHub Action that checks whether tests catch broken code by running every mutant of the lines a change touches. Backed by a pre-registered study and agent benchmarks on 8 open-source Python libraries, published as a paper. On 14 real commits, the agent's tests caught 99\% of mutants with the plugin against 92\% without.
+\gap
 
-\medskip\noindent\textbf{drill-me} (\href{https://github.com/timini/drill-me}{github.com/timini/drill-me}) \\
+\textbf{drill-me} \hfill {\small\href{https://github.com/timini/drill-me}{\color{accent}github.com/timini/drill-me}}\par
 Claude Code plugin that turns Claude into an adaptive tutor: it quizzes before it explains, schedules reviews with spaced repetition and remembers what you got wrong across sessions.
+\gap
 
-\medskip\noindent\textbf{neuromem} (\href{https://github.com/timini/neuromem}{github.com/timini/neuromem}) \\
+\textbf{neuromem} \hfill {\small\href{https://github.com/timini/neuromem}{\color{accent}github.com/timini/neuromem}}\par
 Long-term memory for LLM agents modelled on hippocampal consolidation, with providers for Gemini, OpenAI, Claude and local models. Scores 0.870 on the LongMemEval-s benchmark (n=100).
 
 % --- EDUCATION ---
 \section{Education}
 
-\entry{Birkbeck, University of London}{London, UK}{MSc Bioinformatics \& Systems Biology (Merit)}{Sep 2012 -- Sep 2014}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Studied statistics, protein structure, sequence alignment, systems biology, and software development.
-    \item Thesis: Tracing human migration using MCMC methods for population clustering with dense genotype data.
-\end{itemize}
-\vspace{8pt}
+\role{Birkbeck, University of London}{London, UK}{MSc Bioinformatics and Systems Biology (Merit)}{2012 -- 2014}
+{\small Statistics, protein structure, sequence alignment, systems biology and software development. Thesis: tracing human migration with MCMC population clustering of dense genotype data.}
+\gap
 
-\entry{Leeds University}{Leeds, UK}{BSc Cognitive Science (Hons)}{Sep 2005 -- Sep 2008}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Interdisciplinary course covering computing, psychology, and philosophy.
-    \item Dissertation: Data mining techniques for dynamic data sets.
-\end{itemize}
+\role{University of Leeds}{Leeds, UK}{BSc Cognitive Science (Hons)}{2005 -- 2008}
+{\small Computing, psychology and philosophy. Dissertation: data mining techniques for dynamic data sets.}
 
 \end{document}

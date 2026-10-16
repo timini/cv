@@ -7,6 +7,7 @@ LaTeX-based CV with automated build system and pre-commit hooks.
 - **LaTeX Distribution**: You need a LaTeX distribution installed (e.g., MacTeX for macOS, TeX Live for Linux)
   - macOS: `brew install --cask mactex` or download from [MacTeX](http://www.tug.org/mactex/)
   - Linux: `sudo apt-get install texlive-full` (Ubuntu/Debian) or equivalent
+- **Packages**: the CV uses `sourcesans`, `ly1`, `fontawesome5`, `titlesec`, `enumitem`, `ragged2e` and `xcolor`. Full TeX Live and MacTeX include them; on BasicTeX run `tlmgr --usermode install sourcesans ly1 fontawesome5 titlesec enumitem ragged2e`.
 
 ## Quick Start
 
