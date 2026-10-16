@@ -40,7 +40,7 @@
 % --- HEADER ---
 {\fontsize{26}{30}\selectfont\bfseries Tim Richardson}\par
 \vspace{2pt}
-{\large\color{accent} Senior Software Engineer \textbullet{} Engineering Manager \textbullet{} Genomics and AI}\par
+{\large\color{accent} Software Engineer, Applied AI \textbullet{} Genomics and Health Data}\par
 \vspace{8pt}
 {\small\color{muted}
 \faMapMarker*\ London, UK \quad
@@ -51,47 +51,56 @@
 
 % --- SUMMARY ---
 \section{Summary}
-Senior software engineer and engineering manager with 13+ years building scalable data platforms, specialising in genomics and healthcare. Currently leading AI transformation and managing an engineering team at Genomics England. Track record delivering full-stack systems in Python, Go and TypeScript on AWS and GCP, with deep experience of bioinformatics pipelines and ML integration. Builds and publishes open-source tooling for AI coding agents, tested with pre-registered experiments.
+Software engineer with 15 years' experience, over a decade of it on genomic and health data. At Genomics England I work on national-scale genomic pipelines, build the Claude Code tooling for the organisation's AI coding pilot, and manage a team of six. At IQVIA I deployed patient-level prediction models on real-world health data. I build open-source tools for AI agents and test them with pre-registered experiments.
 
 % --- SKILLS ---
 \section{Technical Skills}
 {\small
 \begin{tabularx}{\linewidth}{@{}>{\bfseries}p{3.1cm}X@{}}
-Languages & Python, Go, TypeScript, JavaScript, Rust, SQL \\
-AI and ML & LLMs, RAG, LangChain, OpenAI and Anthropic APIs, Google ADK, NumPy, SciPy, Pandas \\
-AI agents & Claude Code plugins and skills, agent memory, agent evaluation and benchmarking \\
-Testing & pytest, mutation testing, coverage analysis, TDD, CI quality gates \\
-Backend & FastAPI, Django, Node.js, GraphQL, REST, microservices \\
-Frontend & React, Next.js, Redux, Svelte, Tauri, D3.js \\
-Data & PostgreSQL, Elasticsearch, Redis, vector and graph databases, FHIR, ontologies \\
-Cloud & AWS, GCP, Docker, Kubernetes, Terraform, CI/CD \\
-Bioinformatics & Nextflow, nf-core, VEP, Samtools, BWA, Singularity, LSF \\
+AI and ML & LLM applications, RAG, agents and tool use, model deployment, evaluation and benchmarking; Anthropic, OpenAI and Gemini APIs, Google ADK \\
+AI engineering & Claude Code skills and plugins, MCP servers, agent memory, mutation testing \\
+Genomics and health & Nextflow, nf-core, VEP, Samtools, BWA, Singularity, LSF, FHIR, ontologies, real-world data \\
+Languages & Python, Go, TypeScript, SQL \\
+Platform and data & AWS, GCP, Docker, Kubernetes, Terraform, FastAPI, PostgreSQL, Elasticsearch, vector and graph databases, React \\
 \end{tabularx}}
+
+% --- OPEN SOURCE ---
+\section{Applied AI Projects}
+
+\textbf{Agentic Verification} \hfill {\small\href{https://github.com/timini/agentic-verification}{\color{accent}github.com/timini/agentic-verification}}\par
+Claude Code plugin and GitHub Action that checks whether tests would catch broken code, by running every mutant of the lines a change touches. Evaluated in a pre-registered study and agent benchmarks on 8 open-source Python libraries, written up as a paper. On 14 real commits, the agent's tests caught 99\% of mutants with the plugin against 92\% without.
+\gap
+
+\textbf{neuromem} \hfill {\small\href{https://github.com/timini/neuromem}{\color{accent}github.com/timini/neuromem}}\par
+Long-term memory for LLM agents modelled on hippocampal consolidation, with providers for Gemini, OpenAI, Claude and local models. Scores 0.870 on the LongMemEval-s benchmark (n=100).
+\gap
+
+\textbf{drill-me} \hfill {\small\href{https://github.com/timini/drill-me}{\color{accent}github.com/timini/drill-me}}\par
+Claude Code plugin that turns Claude into an adaptive tutor, with spaced repetition and a memory of what you got wrong. 15 GitHub stars.
 
 % --- EXPERIENCE ---
 \section{Experience}
 
-\role{Genomics England}{London, UK}{Senior Software Engineer and Performance Development Lead}{Dec 2021 -- Present}
+\role{Genomics England}{London, UK}{Senior Software Engineer and Performance Development Lead (line manager)}{Dec 2021 -- Present}
 \begin{itemize}
-  \item \textbf{Engineering leadership:} line manager for 6 direct reports, responsible for mentoring, performance management and delivery.
-  \item \textbf{AI transformation:} leading the internal programme that introduces AI coding assistants across engineering.
-  \item \textbf{Workflow modernisation:} key role in migrating complex workflow orchestration to Nextflow, improving scalability and reproducibility.
-  \item \textbf{Backend development:} designing and maintaining Python services on AWS for high-throughput genomic data processing.
+  \item \textbf{Genomic pipelines:} core engineer on the migration of national-scale genomic workflow orchestration (100,000+ genomes) to Nextflow, for scalability and reproducibility.
+  \item \textbf{Applied AI:} built Claude Code skills, plugins and MCP server integrations for the organisation's AI coding assistant pilot, and trained the pilot teams to use them.
+  \item \textbf{Leadership:} line manager for 6 engineers; hired new team members and supported promotions.
+  \item \textbf{Backend:} Python services on AWS for high-throughput genomic data processing.
 \end{itemize}
 \gap
 
 \role{IQVIA}{London, UK}{Senior Software Engineer, AI/ML Team}{Mar 2019 -- Dec 2021}
-\stack{Go, FastAPI, TypeScript, React, Redux, Elasticsearch, PostgreSQL, D3.js}
+\stack{Go, FastAPI, TypeScript, React, Elasticsearch, PostgreSQL, D3.js}
 \begin{itemize}
-  \item Built a data analytics product for real-world healthcare data: Go backend services and a React frontend.
-  \item Deployed machine learning models with FastAPI for scalable inference in healthcare analytics.
-  \item Designed and implemented the product's statistical features.
+  \item Deployed patient-level prediction models (cohort and outcome prediction on real-world health data) as FastAPI services behind the analytics product.
+  \item Built the product's Go backend, React frontend and statistical features for real-world healthcare data.
   \item Coordinated releases, product development, process improvement and code review.
 \end{itemize}
 \gap
 
 \role{Project Shivom}{London, UK}{Lead Developer}{Oct 2018 -- Mar 2019}
-\stack{Blockchain, smart contracts, Google Genomics, Cloud Build, PostgreSQL, GraphQL, React Apollo}
+\stack{Google Genomics, Cloud Build, PostgreSQL, GraphQL, React Apollo, smart contracts}
 \begin{itemize}
   \item Designed, built and deployed a genomic data sharing platform with blockchain components.
   \item Managed the development team; built the REST backend and React frontend; deployed with Docker and App Engine.
@@ -125,20 +134,6 @@ Bioinformatics & Nextflow, nf-core, VEP, Samtools, BWA, Singularity, LSF \\
 \textbf{Ecomarket.com}, Django Developer & Backend for an online marketplace (Django, PostgreSQL) & 2013 \\
 \textbf{Swerve Concepts}, Junior Developer & Full-stack Python and PHP; built Swerve Media Hub and SignUpAnywhere & 2011 -- 2013 \\
 \end{tabularx}}
-
-% --- OPEN SOURCE ---
-\section{Selected Open Source}
-
-\textbf{Agentic Verification} \hfill {\small\href{https://github.com/timini/agentic-verification}{\color{accent}github.com/timini/agentic-verification}}\par
-Claude Code plugin and GitHub Action that checks whether tests catch broken code by running every mutant of the lines a change touches. Backed by a pre-registered study and agent benchmarks on 8 open-source Python libraries, published as a paper. On 14 real commits, the agent's tests caught 99\% of mutants with the plugin against 92\% without.
-\gap
-
-\textbf{drill-me} \hfill {\small\href{https://github.com/timini/drill-me}{\color{accent}github.com/timini/drill-me}}\par
-Claude Code plugin that turns Claude into an adaptive tutor: it quizzes before it explains, schedules reviews with spaced repetition and remembers what you got wrong across sessions.
-\gap
-
-\textbf{neuromem} \hfill {\small\href{https://github.com/timini/neuromem}{\color{accent}github.com/timini/neuromem}}\par
-Long-term memory for LLM agents modelled on hippocampal consolidation, with providers for Gemini, OpenAI, Claude and local models. Scores 0.870 on the LongMemEval-s benchmark (n=100).
 
 % --- EDUCATION ---
 \section{Education}
